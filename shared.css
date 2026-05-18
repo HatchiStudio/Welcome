@@ -58,6 +58,13 @@
   border-color: #000;
 }
 
+.social-icon.si-discord:hover,
+.social-icon.si-discord:focus-visible {
+  background: #5865f2;
+  color: #fff;
+  border-color: #5865f2;
+}
+
 /* ── Hamburger toggle button ──────────────────────── */
 .nav-toggle {
   display: none;
