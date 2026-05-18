@@ -1,0 +1,166 @@
+/* ══════════════════════════════════════════════════════
+   shared.css — social icons · hamburger menu · scroll-top
+   Included by every page on the site.
+   ══════════════════════════════════════════════════════ */
+
+/* ── Social icon group in nav ─────────────────────── */
+.social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: transform 150ms ease, background 150ms ease, color 150ms ease, border-color 150ms ease;
+  border: 1px solid var(--line, rgba(116, 46, 13, 0.15));
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--ink, #742e0d);
+}
+
+.social-icon:hover,
+.social-icon:focus-visible {
+  transform: translateY(-2px);
+}
+
+.social-icon.si-instagram:hover,
+.social-icon.si-instagram:focus-visible {
+  background: #e1306c;
+  color: #fff;
+  border-color: #e1306c;
+}
+
+.social-icon.si-reddit:hover,
+.social-icon.si-reddit:focus-visible {
+  background: #ff4500;
+  color: #fff;
+  border-color: #ff4500;
+}
+
+.social-icon.si-facebook:hover,
+.social-icon.si-facebook:focus-visible {
+  background: #1877f2;
+  color: #fff;
+  border-color: #1877f2;
+}
+
+.social-icon.si-x:hover,
+.social-icon.si-x:focus-visible {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* ── Hamburger toggle button ──────────────────────── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.2rem;
+  height: 2.2rem;
+  padding: 0.3rem;
+  border: 1px solid var(--line, rgba(116, 46, 13, 0.15));
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--ink, #742e0d);
+  border-radius: 2px;
+  transition: transform 250ms ease, opacity 250ms ease;
+}
+
+/* Hamburger → X animation when nav is open */
+.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile nav drawer ────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Allow header to wrap so nav appears below brand row */
+  .site-header {
+    flex-wrap: wrap;
+    border-radius: 16px !important;
+  }
+
+  /* Hide nav by default on mobile */
+  .site-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--line, rgba(116, 46, 13, 0.15));
+  }
+
+  /* Show nav when header has .nav-open */
+  .nav-open .site-nav {
+    display: flex;
+  }
+
+  .nav-cta {
+    align-self: flex-start;
+  }
+
+  .social-icons {
+    margin-top: 0.1rem;
+  }
+}
+
+/* ── Scroll-to-top button ─────────────────────────── */
+.scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 999px;
+  background: var(--ink, #742e0d);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease, transform 250ms ease;
+  z-index: 200;
+  box-shadow: 0 4px 16px rgba(116, 46, 13, 0.25);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-top:hover {
+  transform: translateY(-2px);
+}

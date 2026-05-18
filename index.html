@@ -5,16 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hatchi | Grow your goals. Evolve your hatchi.</title>
   <meta name="description" content="Turn your goals into real progress—and bring your friends along for the ride. Watch your hatchi evolve as you stay consistent." />
+  <link rel="canonical" href="https://welcome.hatchistudio.com/" />
   <meta property="og:title" content="Hatchi" />
   <meta property="og:description" content="Your hatchi grows when you do. Commit to daily goals, share with friends, and unlock unique traits through consistency." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="favicon.svg" />
+  <meta property="og:url" content="https://welcome.hatchistudio.com/" />
+  <meta property="og:image" content="https://welcome.hatchistudio.com/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hatchi | Grow your goals. Evolve your hatchi." />
+  <meta name="twitter:description" content="Turn your goals into real progress—and bring your friends along for the ride. Watch your hatchi evolve as you stay consistent." />
+  <meta name="twitter:image" content="https://welcome.hatchistudio.com/favicon.svg" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="shared.css" />
 </head>
 <body>
   <div class="sky-glow sky-glow-a"></div>
@@ -27,10 +34,18 @@
     </a>
     <nav class="site-nav">
       <a href="./" aria-current="page">Home</a>
-      <a href="support/">Support</a>
-      <a href="#follow-us">Follow Us</a>
+      <a href="hatchi/support/">Support</a>
+      <div class="social-icons">
+        <a class="social-icon si-instagram" href="https://www.instagram.com/hatchistudio/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a class="social-icon si-reddit" href="https://www.reddit.com/user/HatchiStudio/" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><i class="fab fa-reddit-alien"></i></a>
+        <a class="social-icon si-facebook" href="https://www.facebook.com/profile.php?id=61589714715978" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a class="social-icon si-x" href="https://x.com/HatchiStudioX" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+      </div>
       <a class="nav-cta" href="#download">Download</a>
     </nav>
+    <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
   <main>
@@ -123,27 +138,32 @@
     <section class="section reveal" id="screenshots">
       <div class="section-heading">
         <p class="eyebrow">Preview</p>
-        <h2>Drop your screenshots here</h2>
+        <h2>See it in action</h2>
       </div>
-      <p class="section-intro">
-        Replace these cards with your real app captures when ready.
-      </p>
       <div class="gallery-grid">
         <figure class="shot-card">
-          <div class="shot-placeholder">Hero screenshot</div>
+          <img class="shot-image" src="assets/images/screenshot1.png" alt="Home dashboard and daily flow" loading="lazy" />
           <figcaption>Home dashboard and daily flow</figcaption>
         </figure>
         <figure class="shot-card">
-          <div class="shot-placeholder">Feature screenshot</div>
+          <img class="shot-image" src="assets/images/screenshot2.png" alt="Shared goals and social progress" loading="lazy" />
           <figcaption>Shared goals and social progress</figcaption>
         </figure>
         <figure class="shot-card">
-          <div class="shot-placeholder">Feature screenshot</div>
+          <img class="shot-image" src="assets/images/screenshot3.png" alt="Hatchi evolution and trait unlocks" loading="lazy" />
           <figcaption>Hatchi evolution and trait unlocks</figcaption>
         </figure>
         <figure class="shot-card">
-          <div class="shot-placeholder">Feature screenshot</div>
+          <img class="shot-image" src="assets/images/screenshot4.png" alt="Room customization rewards" loading="lazy" />
           <figcaption>Room customization rewards</figcaption>
+        </figure>
+        <figure class="shot-card">
+          <img class="shot-image" src="assets/images/screenshot5.png" alt="App feature preview" loading="lazy" />
+          <figcaption>App feature preview</figcaption>
+        </figure>
+        <figure class="shot-card">
+          <img class="shot-image" src="assets/images/screenshot6.png" alt="App feature preview" loading="lazy" />
+          <figcaption>App feature preview</figcaption>
         </figure>
       </div>
     </section>
@@ -160,16 +180,17 @@
 
   <footer class="site-footer reveal">
     <p>Hatchi</p>
-    <nav id="follow-us">
-      <a href="support/">Support</a>
-      <a href="privacy/">Privacy</a>
-      <a href="terms/">Terms</a>
+    <nav>
+      <a href="hatchi/support/">Support</a>
+      <a href="hatchi/privacy/">Privacy</a>
+      <a href="hatchi/terms/">Terms</a>
       <a href="https://www.instagram.com/hatchistudio/" target="_blank" rel="noopener noreferrer">Instagram</a>
       <a href="https://www.reddit.com/user/HatchiStudio/" target="_blank" rel="noopener noreferrer">Reddit</a>
       <a href="https://www.facebook.com/profile.php?id=61589714715978" target="_blank" rel="noopener noreferrer">Facebook</a>
     </nav>
   </footer>
 
-  <script src="script.js"></script>
+  <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="shared.js"></script>
 </body>
 </html>
