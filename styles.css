@@ -58,9 +58,12 @@ body {
 .brand-orb {
   width: 40px;
   height: 40px;
-  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
   border-radius: 50%;
   margin-right: 0.5rem;
+  background-image: url("assets/images/app_icon.png");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgba(255, 255, 255, 0.85);
 }
 
 .site-nav {
@@ -111,6 +114,11 @@ main {
   justify-content: center;
   gap: 1rem;
   margin: 2rem 0;
+}
+
+.hero-banner {
+  margin: 1rem auto 0;
+  max-width: 820px;
 }
 
 .btn {
@@ -251,6 +259,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.shot-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
   margin-bottom: 1rem;
 }
 
